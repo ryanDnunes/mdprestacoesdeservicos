@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços de Manutenção</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><img src="logo/logo.png" alt="Logo" class="header-image"> Serviços que oferecemos:</h1>
+        </div>
+        <form id="service-form">
+            <h2>Obras - R$150/dia</h2>
+            <div> 
+                <input type="checkbox" id="reboco" value="150">
+                <label for="reboco">Reboco</label>
+            </div>
+            <div>
+                <input type="checkbox" id="telhado" value="150">
+                <label for="telhado">Telhado</label>
+            </div>
+            <div>
+                <input type="checkbox" id="muro" value="150">
+                <label for="muro">Muro</label>
+            </div>
+            <div>
+                <input type="checkbox" id="comodo" value="150">
+                <label for="comodo">Cômodo</label>
+            </div>
+            <div>
+                <input type="checkbox" id="forro" value="150">
+                <label for="forro">Forro</label>
+            </div>
+            <div>
+                <input type="checkbox" id="piso" value="150">
+                <label for="piso">Piso</label>
+            </div>
+            <div>
+                <input type="checkbox" id="encanamento" value="150">
+                <label for="encanamento">Encanamento</label>
+            </div>
+            <div>
+                <input type="checkbox" id="pintura" value="150">
+                <label for="pintura">Pintura</label>
+            </div>
+            <div>
+                <input type="checkbox" id="gesseiro" value="150">
+                <label for="gesseiro">Gesseiro</label>
+            </div>
+            <div> 
+                <input type="checkbox" id="geral" value="400">
+                <label for="geral">Obra Total: telhado, reboco...</label>
+                <textarea id="descricao" placeholder="Descreva o que você deseja" style="resize: none; overflow-y: auto;"></textarea>
+            </div>
+            <h2>Montador de Móveis</h2>
+            <div>
+                <input type="checkbox" name="movel" id="diaria" value="140">
+                <label for="diaria">Diária - R$140</label>
+            </div>
+            <button type="button" onclick="toggleOptions('more-options-montador')">Mais opções</button>
+            <div id="more-options-montador" class="more-options">
+                <div>
+                    <input type="checkbox" id="camas" value="80">
+                    <label for="camas">Camas - R$80</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="guarda-roupa" value="150">
+                    <label for="guarda-roupa">Guarda-roupa/Roupeiro - R$150</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="comoda" value="60">
+                    <label for="comoda">Cômoda - R$60</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="penteadeira" value="60">
+                    <label for="penteadeira">Penteadeira - R$60</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="prateleiras" value="10">
+                    <label for="prateleiras">Prateleiras - R$10 cada</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mesa" value="60">
+                    <label for="mesa">Mesas (computador/sala) - R$60</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="estante" value="80">
+                    <label for="estante">Estante de livros - R$80</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="painel-tv" value="40">
+                    <label for="painel-tv">Painel para TV - R$40</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="armario-cozinha" value="150">
+                    <label for="armario-cozinha">Armário de cozinha - R$150</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="balcao" value="120">
+                    <label for="balcao">Balcões - R$120</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="armario-banheiro" value="100">
+                    <label for="armario-banheiro">Armário de banheiro - R$100</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="escrivaninha" value="80">
+                    <label for="escrivaninha">Escrivaninha - R$80</label>
+                </div>
+            </div>
+            
+            <h2>Manutenção e Obras Interiores</h2>
+            <div>
+                <input type="checkbox" id="chuveiro-com-caixa" value="30">
+                <label for="chuveiro-com-caixa">Troca de Chuveiro (com caixa de luz) - R$30</label>
+            </div>
+            <div>
+                <input type="checkbox" id="chuveiro-sem-caixa" value="40">
+                <label for="chuveiro-sem-caixa">Troca de Chuveiro (sem caixa de luz) - R$40</label>
+            </div>
+            <div>
+                <input type="checkbox" id="instalar-vaso" value="90">
+                <label for="instalar-vaso">Instalar Vaso/Pia - R$90</label>
+            </div>
+
+            <h2>Doméstica - R$200/dia</h2> 
+            <div> 
+                <input type="checkbox" id="faxina-residencial" value="200">
+                <label for="faxina-residencial">Faxina residencial</label>
+            </div>
+            <button type="button" onclick="toggleOptions('more-options-domestica')">Adicionais de doméstica</button>
+            <div id="more-options-domestica" class="more-options">
+                <div>
+                    <input type="checkbox" id="baba" value="50">
+                    <label for="baba">Babá - R$50</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="cozinhar" value="30">
+                    <label for="cozinhar">Cozinhar - R$30</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="finais-de-semana" value="90">
+                    <label for="finais-de-semana">Finais de semana - R$90</label>
+                </div>
+            </div>
+
+            <div id="total-price">Total: R$0</div>
+            <button type="button" onclick="openModal()" class="satisfeito-btn">Satisfeito</button>
+        </form>
+    </div>
+    
+    <div id="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Detalhes do Pedido</h2>
+            <input type="text" id="name" placeholder="Nome">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="location" placeholder="Localização" required>
+            <textarea id="observations" placeholder="Observações"></textarea>
+            <button type="button" onclick="submitOrder()">Concluído</button>
+            <button type="button" onclick="closeModal()">Sair</button>
+        </div>
+    </div>
+
+
+    <button class="trabalhos-realizados-btn">Trabalhos realizados</button>
+
+    <!-- Modal para exibir vídeos e imagens -->
+    <div id="trabalhos-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Trabalhos realizados</h2>
+            <div id="media-content">
+                <h3>Montagem de Moveis</h3>
+                <!-- Conteúdo de mídia será inserido aqui -->
+                <img src="imagesMOVEIS/img1.jpg" alt="Imagem 1" style="width: 100%; margin-bottom: 10px;">
+                <video src="imagesMOVEIS/video1.mp4" controls style="width: 100%; margin-bottom: 10px;"></video>
+                <video src="imagesMOVEIS/video2.mp4" controls style="width: 100%; margin-bottom: 10px;"></video>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
