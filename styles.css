@@ -68,6 +68,8 @@ button {
     margin: 5px 0;
 }
 
+
+
 .satisfeito-btn {
     background-color: #007BFF;
     color: white;
@@ -176,7 +178,7 @@ button:hover {
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease;
-    margin: 5px auto; /* Centraliza o botão horizontalmente */
+    margin: 5px 0; /* Centraliza o botão horizontalmente */
     display: block;
     position: fixed;
     bottom: 560px; /* Ajuste a posição para que o botão fique acima do botão "Satisfeito" */
