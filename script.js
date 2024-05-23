@@ -170,25 +170,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    var draggableBtn = document.getElementById('draggable-btn');
-
-    draggableBtn.addEventListener('mousedown', function(e) {
-        var offsetX = e.clientX - draggableBtn.getBoundingClientRect().left;
-        var offsetY = e.clientY - draggableBtn.getBoundingClientRect().top;
-
-        function mouseMoveHandler(e) {
-            draggableBtn.style.left = (e.clientX - offsetX) + 'px';
-            draggableBtn.style.top = (e.clientY - offsetY) + 'px';
-        }
-
-        function reset() {
-            document.removeEventListener('mousemove', mouseMoveHandler);
-            document.removeEventListener('mouseup', reset);
-        }
-
-        document.addEventListener('mousemove', mouseMoveHandler);
-        document.addEventListener('mouseup', reset);
-    });
-});
