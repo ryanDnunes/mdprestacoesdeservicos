@@ -2,11 +2,11 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f0f2f5;
     margin: 0;
-    padding: 20px;
+    padding: 18px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh;
+    min-height: 180vh;
 }
 
 h1, h2 {
@@ -14,7 +14,7 @@ h1, h2 {
 }
 
 h1 {
-    margin-bottom: 18px;
+    margin-bottom: 17px;
     font-size: 2em;
     display: flex;
     align-items: center;
@@ -180,7 +180,7 @@ button:hover {
     display: block;
     position: fixed;
     bottom: 580px; /* Ajuste a posição para que o botão fique acima do botão "Satisfeito" */
-    left: 10px;
+    left: 1180px;
     z-index: 999;
 }
 
