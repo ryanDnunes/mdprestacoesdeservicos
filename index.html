@@ -12,62 +12,72 @@
             <h1><img src="logo/logo.png" alt="Logo" class="header-image"> Serviços que oferecemos:</h1>
         </div>
         <form id="service-form">
-            <h2>Obras - R$150/dia</h2>
+            <h2>Obras - R$175/dia</h2>
+            <p>Prezado cliente, todos preços de serviços que oferecemos estão sujeitos a alteração.</p>
             <div> 
-                <input type="checkbox" id="reboco" value="150">
+                <input type="checkbox" id="reboco" value="175">
                 <label for="reboco">Reboco</label>
             </div>
             <div>
-                <input type="checkbox" id="telhado" value="150">
+                <input type="checkbox" id="telhado" value="175">
                 <label for="telhado">Telhado</label>
             </div>
             <div>
-                <input type="checkbox" id="muro" value="150">
+                <input type="checkbox" id="muro" value="175">
                 <label for="muro">Muro</label>
             </div>
             <div>
-                <input type="checkbox" id="comodo" value="150">
+                <input type="checkbox" id="comodo" value="175">
                 <label for="comodo">Cômodo</label>
             </div>
             <div>
-                <input type="checkbox" id="forro" value="150">
+                <input type="checkbox" id="forro" value="175">
                 <label for="forro">Forro</label>
             </div>
             <div>
-                <input type="checkbox" id="piso" value="150">
+                <input type="checkbox" id="piso" value="175">
                 <label for="piso">Piso</label>
             </div>
             <div>
-                <input type="checkbox" id="encanamento" value="150">
+                <input type="checkbox" id="encanamento" value="175">
                 <label for="encanamento">Encanamento</label>
             </div>
             <div>
-                <input type="checkbox" id="pintura" value="150">
+                <input type="checkbox" id="pintura" value="175">
                 <label for="pintura">Pintura</label>
             </div>
             <div>
-                <input type="checkbox" id="gesseiro" value="150">
+                <input type="checkbox" id="gesseiro" value="175">
                 <label for="gesseiro">Gesseiro</label>
             </div>
             <div> 
-                <input type="checkbox" id="geral" value="400">
+                <input type="checkbox" id="geral" value="0">
                 <label for="geral">Obra Total: telhado, reboco...</label>
                 <textarea id="descricao" placeholder="Descreva o que você deseja" style="resize: none; overflow-y: auto;"></textarea>
             </div>
             <h2>Montador de Móveis</h2>
             <div>
-                <input type="checkbox" name="movel" id="diaria" value="140">
-                <label for="diaria">Diária - R$140</label>
+                <input type="checkbox" name="movel" id="diaria" value="190">
+                <label for="diaria">Diária - R$190 ou opções abaixo: </label>
             </div>
+            <div>
+                <input type="checkbox" name="movel" id="diaria" value="0">
+                <label for="diaria">Instação de leds (R$30 o metro) </label>
+            </div>
+            
             <button type="button" onclick="toggleOptions('more-options-montador')">Mais opções</button>
             <div id="more-options-montador" class="more-options">
                 <div>
-                    <input type="checkbox" id="camas" value="80">
-                    <label for="camas">Camas - R$80</label>
+                    <input type="checkbox" id="camas" value="190">
+                    <label for="camas">Camas - R$190</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="guarda-roupa" value="150">
-                    <label for="guarda-roupa">Guarda-roupa/Roupeiro - R$150</label>
+                    <input type="checkbox" id="guarda-roupa" value="400">
+                    <label for="guarda-roupa">Guarda-roupa/Roupeiro de até 3 metros - R$400</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="guarda-roupa" value="800">
+                    <label for="Closet">Closet: R$800</label>
                 </div>
                 <div>
                     <input type="checkbox" id="comoda" value="60">
@@ -82,28 +92,32 @@
                     <label for="prateleiras">Prateleiras - R$10 cada</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="mesa" value="60">
-                    <label for="mesa">Mesas (computador/sala) - R$60</label>
+                    <input type="checkbox" id="mesa" value="80">
+                    <label for="mesa">Mesas (computador/sala) - R$80</label>
                 </div>
                 <div>
                     <input type="checkbox" id="estante" value="80">
                     <label for="estante">Estante de livros - R$80</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="painel-tv" value="40">
-                    <label for="painel-tv">Painel para TV - R$40</label>
+                    <input type="checkbox" id="painel-tv" value="90">
+                    <label for="painel-tv">Painel para TV - R$90</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="armario-cozinha" value="150">
-                    <label for="armario-cozinha">Armário de cozinha - R$150</label>
+                    <input type="checkbox" id="armario-cozinha" value="300">
+                    <label for="armario-cozinha pequeno">Armário de cozinha - R$300</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="armario-cozinha" value="500">
+                    <label for="armario-cozinha medio/grande">Armário de cozinha - R$500</label>
                 </div>
                 <div>
                     <input type="checkbox" id="balcao" value="120">
                     <label for="balcao">Balcões - R$120</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="armario-banheiro" value="100">
-                    <label for="armario-banheiro">Armário de banheiro - R$100</label>
+                    <input type="checkbox" id="armario-banheiro" value="120">
+                    <label for="armario-banheiro">Armário de banheiro - R$120</label>
                 </div>
                 <div>
                     <input type="checkbox" id="escrivaninha" value="80">
@@ -113,21 +127,22 @@
             
             <h2>Manutenção e Obras Interiores</h2>
             <div>
-                <input type="checkbox" id="chuveiro-com-caixa" value="30">
-                <label for="chuveiro-com-caixa">Troca de Chuveiro (com caixa de luz) - R$30</label>
+                <input type="checkbox" id="chuveiro-com-caixa" value="90">
+                <label for="chuveiro-com-caixa">Troca de Chuveiro - R$90</label>
             </div>
             <div>
-                <input type="checkbox" id="chuveiro-sem-caixa" value="40">
-                <label for="chuveiro-sem-caixa">Troca de Chuveiro (sem caixa de luz) - R$40</label>
+                <input type="checkbox" id="instalar-vaso" value="130">
+                <label for="instalar-vaso">Instalar Vaso/Pia - R$130</label>
             </div>
             <div>
-                <input type="checkbox" id="instalar-vaso" value="90">
-                <label for="instalar-vaso">Instalar Vaso/Pia - R$90</label>
+                <input type="checkbox" id="instalar-vaso" value="0">
+                <label for="instalar-leds">instalar-leds - R$30 o metro</label>
             </div>
 
-            <h2>Doméstica - R$200/dia</h2> 
+
+            <h2>Doméstica - R$190/dia</h2> 
             <div> 
-                <input type="checkbox" id="faxina-residencial" value="200">
+                <input type="checkbox" id="faxina-residencial" value="190">
                 <label for="faxina-residencial">Faxina residencial</label>
             </div>
             <button type="button" onclick="toggleOptions('more-options-domestica')">Adicionais de doméstica</button>
@@ -141,9 +156,10 @@
                     <label for="cozinhar">Cozinhar - R$30</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="finais-de-semana" value="90">
-                    <label for="finais-de-semana">Finais de semana - R$90</label>
+                    <input type="checkbox" id="finais-de-semana" value="30">
+                    <label for="finais-de-semana">Finais de semana - R$30</label>
                 </div>
+    
             </div>
 
             <div id="total-price">Total: R$0</div>
