@@ -1,14 +1,16 @@
+/* Body Styling */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f0f2f5;
     margin: 0;
-    padding: 20px;
+    padding: 180px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
 }
 
+/* Headings Styling */
 h1, h2 {
     color: #333;
 }
@@ -20,12 +22,19 @@ h1 {
     align-items: center;
 }
 
+h2 {
+    margin-top: 18px;
+    font-size: 1.5em;
+}
+
+/* Header Image Styling */
 .header-image {
     margin-right: 2px;
-    max-width: 80px; /* Ajuste conforme necessário */
+    max-width: 80px;
     height: auto;
 }
 
+/* Form Styling */
 form {
     background: #fff;
     padding: 30px;
@@ -36,28 +45,28 @@ form {
     margin: auto;
 }
 
-h2 {
-    margin-top: 18px;
-    font-size: 1.5em;
-}
-
+/* General Div Styling */
 div {
     margin-bottom: 12px;
 }
 
+/* Label Styling */
 label {
     margin-left: 8px;
     color: #555;
     font-size: 1em;
 }
 
+/* Input Checkbox Styling */
 input[type="checkbox"] {
     margin-right: 8px;
     transform: scale(1.2);
 }
 
-button {
-    background-color: #007BFF;
+/* Button Styling */
+button,
+.satisfeito-btn,
+.trabalhos-realizados-btn {
     color: white;
     border: none;
     padding: 8px 18px;
@@ -68,23 +77,33 @@ button {
     margin: 5px 0;
 }
 
-.satisfeito-btn {
+button {
     background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 8px 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-    margin: 5px auto;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Specific Button Styling */
+.satisfeito-btn,
+.trabalhos-realizados-btn {
     display: block;
     position: fixed;
-    bottom: 10px;
     left: 10px;
     z-index: 999;
 }
 
+.satisfeito-btn {
+    bottom: 10px;
+}
+
+.trabalhos-realizados-btn {
+    background-color: #28a745;
+    bottom: 580px;
+}
+
+/* Total Price Styling */
 #total-price {
     font-size: 1.5em;
     font-weight: bold;
@@ -101,10 +120,7 @@ button {
     z-index: 999;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
+/* Employee Control Styling */
 .employee-control {
     display: flex;
     align-items: center;
@@ -121,6 +137,7 @@ button:hover {
     font-weight: bold;
 }
 
+/* More Options Styling */
 #more-options-montador,
 #more-options-domestica {
     padding-left: 18px;
@@ -128,6 +145,7 @@ button:hover {
     display: none;
 }
 
+/* Modal Styling */
 #modal {
     position: fixed;
     top: 0;
@@ -153,6 +171,7 @@ button:hover {
     margin-top: 0;
 }
 
+/* Modal Input and Textarea Styling */
 #modal input,
 #modal textarea {
     width: calc(100% - 20px);
@@ -167,29 +186,8 @@ button:hover {
     width: 100%;
     margin-top: 10px;
 }
-.trabalhos-realizados-btn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 8px 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-    margin: 5px auto; /* Centraliza o botão horizontalmente */
-    display: block;
-    position: fixed;
-    bottom: 580px; /* Ajuste a posição para que o botão fique acima do botão "Satisfeito" */
-    left: 10px;
-    z-index: 999;
-}
 
-
-
-
-
-
-
+/* Trabalhos Realizados Modal Styling */
 #trabalhos-modal {
     display: none;
     position: fixed;
@@ -199,80 +197,29 @@ button:hover {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro para destacar o modal */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #trabalhos-modal .modal-content {
     background-color: #fefefe;
-    margin: 10% auto 0; /* Centraliza o modal verticalmente */
-    padding: 10px;
+    margin: 10% auto 0;
+    padding: 20px;
     border: 1px solid #888;
-    width: 40%; /* Define a largura do modal */
-    height: auto; /* Altura automática */
-    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se necessário */
-    box-sizing: border-box; /* Inclui a borda no cálculo da altura total */
+    width: 40%;
+    height: auto;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
 #trabalhos-modal .modal-content img,
 #trabalhos-modal .modal-content video {
-    max-width: 80%; /* Ajuste conforme necessário */
-    max-height: 80%; /* Ajuste conforme necessário */
-    display: block; /* Garante que a mídia fique centralizada */
-    margin: 0 auto 10px; /* Adiciona um espaço entre as mídias e centraliza */
-    object-fit: contain; /* Garante que o conteúdo seja totalmente visível */
-}
-#draggable-btn {
-    cursor: grab;
-    position: absolute;
-}
-
-#draggable-btn:active {
-    cursor: grabbing;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
 }
 
 #trabalhos-modal .modal-content h2 {
-    text-align: center; /* Centraliza o texto horizontalmente */
-    margin-top: 0; /* Remove a margem superior padrão */
-}
-
-#trabalhos-modal .modal-content h2:first-of-type {
-    font-size: 2em; /* Tamanho maior para o primeiro h2 */
-    font-weight: bold; /* Negrito para destacar */
-    color: #333; /* Cor mais escura para um contraste melhor */
-    font-family: 'Georgia', serif; /* Fonte serifada para um toque clássico */
-    padding-bottom: 10px; /* Espaçamento abaixo do texto */
-    border-bottom: 2px solid #ccc; /* Linha abaixo do primeiro h2 */
-}
-
-#trabalhos-modal .modal-content h2:nth-of-type(2) {
-    font-size: 1.2em; /* Tamanho menor para o segundo h2 */
-    font-weight: normal; /* Peso normal para um estilo mais sutil */
-    color: #555; /* Cor ligeiramente mais clara */
-    font-family: 'Arial', sans-serif; /* Fonte sans-serif para um contraste */
-    margin-bottom: 10px; /* Espaçamento abaixo do segundo h2 */
-}
-
-
-
-
-#trabalhos-modal .modal-content h3 {
-    text-align: center; /* Centraliza o texto horizontalmente */
-    margin-top: 0; /* Remove a margem superior padrão */
-}
-
-#trabalhos-modal .modal-content h3:first-of-type {
-    font-size: 2em; /* Tamanho maior para o primeiro h2 */
-    font-weight: bold; /* Negrito para destacar */
-    color: #333; /* Cor mais escura para um contraste melhor */
-    font-family: 'Georgia', serif; /* Fonte serifada para um toque clássico */
-    padding-bottom: 10px; /* Espaçamento abaixo do texto */
-    
-}
-
-#trabalhos-modal .modal-content h3:nth-of-type(2) {
-    font-size: 1.2em; /* Tamanho menor para o segundo h2 */
-    font-weight: normal; /* Peso normal para um estilo mais sutil */
-    color: #555; /* Cor ligeiramente mais clara */
-    font-family: 'Arial', sans-serif; /* Fonte sans-serif para um contraste */
-    margin-bottom: 10px; /* Espaçamento abaixo do segundo h2 */
+    text-align: center;
+    margin-top: 0;
 }
