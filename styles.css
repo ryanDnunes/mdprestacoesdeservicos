@@ -18,6 +18,7 @@ h1 {
     font-size: 2em;
     display: flex;
     align-items: center;
+    
 }
 
 .header-image {
@@ -69,7 +70,6 @@ button {
 }
 
 
-
 .satisfeito-btn {
     background-color: #007BFF;
     color: white;
@@ -82,7 +82,7 @@ button {
     margin: 5px auto;
     display: block;
     position: fixed;
-    bottom: 50px;
+    bottom: 10px;
     left: 10px;
     z-index: 999;
 }
@@ -93,7 +93,7 @@ button {
     color: #333;
     text-align: center;
     position: fixed;
-    bottom: 80px;
+    bottom: 50px;
     left: 10px;
     background-color: white;
     padding: 10px;
@@ -170,20 +170,18 @@ button:hover {
     margin-top: 10px;
 }
 .trabalhos-realizados-btn {
-    background-color: #28a745;
+    background-color: #b8a2df;
     color: white;
     border: none;
-    padding: 8px 18px;
+    padding: 8px 30px;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease;
-    margin: 5px 0; /* Centraliza o botão horizontalmente */
-    display: block;
-    position: fixed;
-    bottom: 5px; /* Ajuste a posição para que o botão fique acima do botão "Satisfeito" */
-    left: 10px;
-    z-index: 999;
+    margin: 5px 0;
+    margin-left: 30%;
+    
+    
+    
 }
 
 
@@ -209,7 +207,7 @@ button:hover {
     margin: 10% auto 0; /* Centraliza o modal verticalmente */
     padding: 10px;
     border: 1px solid #888;
-    width: 50%; /* Define a largura do modal */
+    width: 40%; /* Define a largura do modal */
     height: auto; /* Altura automática */
     overflow-y: auto; /* Adiciona uma barra de rolagem vertical se necessário */
     box-sizing: border-box; /* Inclui a borda no cálculo da altura total */
@@ -217,8 +215,8 @@ button:hover {
 
 #trabalhos-modal .modal-content img,
 #trabalhos-modal .modal-content video {
-    max-width: 90%; /* Ajuste conforme necessário */
-    max-height: 90%; /* Ajuste conforme necessário */
+    max-width: 80%; /* Ajuste conforme necessário */
+    max-height: 80%; /* Ajuste conforme necessário */
     display: block; /* Garante que a mídia fique centralizada */
     margin: 0 auto 10px; /* Adiciona um espaço entre as mídias e centraliza */
     object-fit: contain; /* Garante que o conteúdo seja totalmente visível */
@@ -256,7 +254,7 @@ button:hover {
 }
 
 #trabalhos-modal .modal-content h3:first-of-type {
-    font-size: 1.5em; /* Tamanho maior para o primeiro h2 */
+    font-size: 2em; /* Tamanho maior para o primeiro h2 */
     font-weight: bold; /* Negrito para destacar */
     color: #333; /* Cor mais escura para um contraste melhor */
     font-family: 'Georgia', serif; /* Fonte serifada para um toque clássico */
@@ -270,4 +268,15 @@ button:hover {
     color: #555; /* Cor ligeiramente mais clara */
     font-family: 'Arial', sans-serif; /* Fonte sans-serif para um contraste */
     margin-bottom: 10px; /* Espaçamento abaixo do segundo h2 */
+}
+
+
+p {
+    font-size: 1em; /* Tamanho menor para o segundo h2 */
+    font-weight: normal; /* Peso normal para um estilo mais sutil */
+    color: #555; /* Cor ligeiramente mais clara */
+    font-family: 'Arial', sans-serif; /* Fonte sans-serif para um contraste */
+    margin-bottom: 10px; /* Espaçamento abaixo do segundo h2 */
+    text-align: center;
+    
 }
