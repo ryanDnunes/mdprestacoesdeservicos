@@ -2,7 +2,7 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f0f2f5;
     margin: 0;
-    padding: 18px;
+    padding: 40px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -179,8 +179,8 @@ button:hover {
     margin: 5px auto; /* Centraliza o botão horizontalmente */
     display: block;
     position: fixed;
-    bottom: 580px; /* Ajuste a posição para que o botão fique acima do botão "Satisfeito" */
-    left: 1180px;
+    bottom: 560px; /* Ajuste a posição para que o botão fique acima do botão "Satisfeito" */
+    left: 10px;
     z-index: 999;
 }
 
