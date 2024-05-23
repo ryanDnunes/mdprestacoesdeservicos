@@ -1,191 +1,278 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços de Manutenção</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1><img src="logo/logo.png" alt="Logo" class="header-image"> Serviços que oferecemos:</h1>
-        </div>
-        <form id="service-form">
-            <h2>Obras - R$150/dia</h2>
-            <div> 
-                <input type="checkbox" id="reboco" value="150">
-                <label for="reboco">Reboco</label>
-            </div>
-            <div>
-                <input type="checkbox" id="telhado" value="150">
-                <label for="telhado">Telhado</label>
-            </div>
-            <div>
-                <input type="checkbox" id="muro" value="150">
-                <label for="muro">Muro</label>
-            </div>
-            <div>
-                <input type="checkbox" id="comodo" value="150">
-                <label for="comodo">Cômodo</label>
-            </div>
-            <div>
-                <input type="checkbox" id="forro" value="150">
-                <label for="forro">Forro</label>
-            </div>
-            <div>
-                <input type="checkbox" id="piso" value="150">
-                <label for="piso">Piso</label>
-            </div>
-            <div>
-                <input type="checkbox" id="encanamento" value="150">
-                <label for="encanamento">Encanamento</label>
-            </div>
-            <div>
-                <input type="checkbox" id="pintura" value="150">
-                <label for="pintura">Pintura</label>
-            </div>
-            <div>
-                <input type="checkbox" id="gesseiro" value="150">
-                <label for="gesseiro">Gesseiro</label>
-            </div>
-            <div> 
-                <input type="checkbox" id="geral" value="400">
-                <label for="geral">Obra Total: telhado, reboco...</label>
-                <textarea id="descricao" placeholder="Descreva o que você deseja" style="resize: none; overflow-y: auto;"></textarea>
-            </div>
-            <h2>Montador de Móveis</h2>
-            <div>
-                <input type="checkbox" name="movel" id="diaria" value="140">
-                <label for="diaria">Diária - R$140</label>
-            </div>
-            <button type="button" onclick="toggleOptions('more-options-montador')">Mais opções</button>
-            <div id="more-options-montador" class="more-options">
-                <div>
-                    <input type="checkbox" id="camas" value="80">
-                    <label for="camas">Camas - R$80</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="guarda-roupa" value="150">
-                    <label for="guarda-roupa">Guarda-roupa/Roupeiro - R$150</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="comoda" value="60">
-                    <label for="comoda">Cômoda - R$60</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="penteadeira" value="60">
-                    <label for="penteadeira">Penteadeira - R$60</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="prateleiras" value="10">
-                    <label for="prateleiras">Prateleiras - R$10 cada</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="mesa" value="60">
-                    <label for="mesa">Mesas (computador/sala) - R$60</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="estante" value="80">
-                    <label for="estante">Estante de livros - R$80</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="painel-tv" value="40">
-                    <label for="painel-tv">Painel para TV - R$40</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="armario-cozinha" value="150">
-                    <label for="armario-cozinha">Armário de cozinha - R$150</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="balcao" value="120">
-                    <label for="balcao">Balcões - R$120</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="armario-banheiro" value="100">
-                    <label for="armario-banheiro">Armário de banheiro - R$100</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="escrivaninha" value="80">
-                    <label for="escrivaninha">Escrivaninha - R$80</label>
-                </div>
-            </div>
-            
-            <h2>Manutenção e Obras Interiores</h2>
-            <div>
-                <input type="checkbox" id="chuveiro-com-caixa" value="30">
-                <label for="chuveiro-com-caixa">Troca de Chuveiro (com caixa de luz) - R$30</label>
-            </div>
-            <div>
-                <input type="checkbox" id="chuveiro-sem-caixa" value="40">
-                <label for="chuveiro-sem-caixa">Troca de Chuveiro (sem caixa de luz) - R$40</label>
-            </div>
-            <div>
-                <input type="checkbox" id="instalar-vaso" value="90">
-                <label for="instalar-vaso">Instalar Vaso/Pia - R$90</label>
-            </div>
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
 
-            <h2>Doméstica - R$200/dia</h2> 
-            <div> 
-                <input type="checkbox" id="faxina-residencial" value="200">
-                <label for="faxina-residencial">Faxina residencial</label>
-            </div>
-            <button type="button" onclick="toggleOptions('more-options-domestica')">Adicionais de doméstica</button>
-            <div id="more-options-domestica" class="more-options">
-                <div>
-                    <input type="checkbox" id="baba" value="50">
-                    <label for="baba">Babá - R$50</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="cozinhar" value="30">
-                    <label for="cozinhar">Cozinhar - R$30</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="finais-de-semana" value="90">
-                    <label for="finais-de-semana">Finais de semana - R$90</label>
-                </div>
-            </div>
+h1, h2 {
+    color: #333;
+}
 
-            <div id="total-price">Total: R$0</div>
-            <button type="button" onclick="openModal()" class="satisfeito-btn">Satisfeito</button>
+h1 {
+    margin-bottom: 18px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+}
 
-            
-        </form>
-           </div>
+.header-image {
+    margin-right: 2px;
+    max-width: 80px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+h2 {
+    margin-top: 18px;
+    font-size: 1.5em;
+}
+
+div {
+    margin-bottom: 12px;
+}
+
+label {
+    margin-left: 8px;
+    color: #555;
+    font-size: 1em;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin: 5px 0;
+}
+
+.satisfeito-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin: 5px auto;
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 999;
+}
+
+#total-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    position: fixed;
+    bottom: 50px;
+    left: 10px;
+    background-color: white;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    width: auto;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.employee-control {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.employee-control button {
+    margin: 0 8px;
+    padding: 5px 15px;
+}
+
+.employee-count {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#more-options-montador,
+#more-options-domestica {
+    padding-left: 18px;
+    margin-top: 8px;
+    display: none;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal div {
+    background: #fff;
+    padding: 18px;
+    border-radius: 6px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#modal h2 {
+    margin-top: 0;
+}
+
+#modal input,
+#modal textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#modal button {
+    width: 100%;
+    margin-top: 10px;
+}
+.trabalhos-realizados-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin: 5px auto; /* Centraliza o botão horizontalmente */
+    display: block;
+    position: fixed;
+    bottom: 580px; /* Ajuste a posição para que o botão fique acima do botão "Satisfeito" */
+    left: 10px;
+    z-index: 999;
+}
+
+
+
+
+
+
+
+#trabalhos-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro para destacar o modal */
+}
+
+#trabalhos-modal .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto 0; /* Centraliza o modal verticalmente */
+    padding: 10px;
+    border: 1px solid #888;
+    width: 40%; /* Define a largura do modal */
+    height: auto; /* Altura automática */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical se necessário */
+    box-sizing: border-box; /* Inclui a borda no cálculo da altura total */
+}
+
+#trabalhos-modal .modal-content img,
+#trabalhos-modal .modal-content video {
+    max-width: 80%; /* Ajuste conforme necessário */
+    max-height: 80%; /* Ajuste conforme necessário */
+    display: block; /* Garante que a mídia fique centralizada */
+    margin: 0 auto 10px; /* Adiciona um espaço entre as mídias e centraliza */
+    object-fit: contain; /* Garante que o conteúdo seja totalmente visível */
+}
+#draggable-btn {
+    cursor: grab;
+    position: absolute;
+}
+
+#draggable-btn:active {
+    cursor: grabbing;
+}
+
+#trabalhos-modal .modal-content h2 {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-top: 0; /* Remove a margem superior padrão */
+}
+
+#trabalhos-modal .modal-content h2:first-of-type {
+    font-size: 2em; /* Tamanho maior para o primeiro h2 */
+    font-weight: bold; /* Negrito para destacar */
+    color: #333; /* Cor mais escura para um contraste melhor */
+    font-family: 'Georgia', serif; /* Fonte serifada para um toque clássico */
+    padding-bottom: 10px; /* Espaçamento abaixo do texto */
+    border-bottom: 2px solid #ccc; /* Linha abaixo do primeiro h2 */
+}
+
+#trabalhos-modal .modal-content h2:nth-of-type(2) {
+    font-size: 1.2em; /* Tamanho menor para o segundo h2 */
+    font-weight: normal; /* Peso normal para um estilo mais sutil */
+    color: #555; /* Cor ligeiramente mais clara */
+    font-family: 'Arial', sans-serif; /* Fonte sans-serif para um contraste */
+    margin-bottom: 10px; /* Espaçamento abaixo do segundo h2 */
+}
+
+
+
+
+#trabalhos-modal .modal-content h3 {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-top: 0; /* Remove a margem superior padrão */
+}
+
+#trabalhos-modal .modal-content h3:first-of-type {
+    font-size: 2em; /* Tamanho maior para o primeiro h2 */
+    font-weight: bold; /* Negrito para destacar */
+    color: #333; /* Cor mais escura para um contraste melhor */
+    font-family: 'Georgia', serif; /* Fonte serifada para um toque clássico */
+    padding-bottom: 10px; /* Espaçamento abaixo do texto */
     
-    <div id="modal" style="display: none;">
-        <div class="modal-content">
-            <h2>Detalhes do Pedido</h2>
-            <input type="text" id="name" placeholder="Nome">
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="text" id="location" placeholder="Localização" required>
-            <textarea id="observations" placeholder="Observações"></textarea>
-            <button type="button" onclick="submitOrder()">Concluído</button>
-            <button type="button" onclick="closeModal()">Sair</button>
-        </div>
-    </div>
+}
 
-
-       
-<p>Clique no botão abaixo para ver trabalhos já realizados</p>
-    <button class="trabalhos-realizados-btn", class= "button">Trabalhos realizados</button>
-
-        <!-- Modal para exibir vídeos e imagens -->
-        <div id="trabalhos-modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Trabalhos realizados</h2>
-                <div id="media-content">
-                    <h3>Montagem de Moveis</h3>
-                    <!-- Conteúdo de mídia será inserido aqui -->
-                    <img src="imagesMOVEIS/img1.jpg" alt="Imagem 1" style="width: 100%; margin-bottom: 10px;">
-                    <video src="imagesMOVEIS/video1.mp4" controls style="width: 100%; margin-bottom: 10px;"></video>
-                    <video src="imagesMOVEIS/video2.mp4" controls style="width: 100%; margin-bottom: 10px;"></video>
-                </div>
-            </div>
-     </div>
-    
-
-    <script src="script.js"></script>
-</body>
-</html>
+#trabalhos-modal .modal-content h3:nth-of-type(2) {
+    font-size: 1.2em; /* Tamanho menor para o segundo h2 */
+    font-weight: normal; /* Peso normal para um estilo mais sutil */
+    color: #555; /* Cor ligeiramente mais clara */
+    font-family: 'Arial', sans-serif; /* Fonte sans-serif para um contraste */
+    margin-bottom: 10px; /* Espaçamento abaixo do segundo h2 */
+}
