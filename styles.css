@@ -3,11 +3,11 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f0f2f5;
     margin: 0;
-    padding: 180px;
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh;
+    min-height: 180vh;
 }
 
 /* Headings Styling */
@@ -97,10 +97,25 @@ button:hover {
 .satisfeito-btn {
     bottom: 10px;
 }
-
+#texto {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    position: fixed;
+    bottom: 50px;
+    left: 160px;
+    background-color: white;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    width: auto;
+    box-sizing: border-box;
+    z-index: 999;
+}
 .trabalhos-realizados-btn {
     background-color: #28a745;
-    bottom: 580px;
+    bottom: 10px;
+    left: 200px;
 }
 
 /* Total Price Styling */
