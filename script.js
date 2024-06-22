@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('modal');
 
     const servicePrices = {
-        obras: 150,
-        montador: 140,
+        obras: 190,
+        montador: 180,
         manutencao: 0,
         domestica: 200
     };
@@ -168,5 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
         }
     });
+
+
     
 });
